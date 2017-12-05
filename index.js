@@ -19,7 +19,12 @@ mongoose.connection.on('disconnected', function () {
 });
 
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING,
-    {reconnectTries: Number.MAX_VALUE, useMongoClient: true},
+    {
+        reconnectTries: Number.MAX_VALUE, useMongoClient: true,
+        socketOptions: {
+            connectTimeoutMS: Number.MAX_VALUE, socketTimeoutMS: Number.MAX_VALUE
+        }
+    },
     function (err) {
         if (err) {
             console.error('fail to connect mongodb', err);
