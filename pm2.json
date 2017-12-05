@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "stat",
+      "script": "index.js",
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "env": {
+        "MONGODB_CONNECTION_STRING": "mongodb://127.0.0.1:27017/dolphin"
+      }
+    }
+  ]
+}
