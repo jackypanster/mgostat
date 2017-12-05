@@ -1,5 +1,5 @@
-function start() {
-    return db.messages.find();
+use dolphin;
+db.messages.find();
 
 
     /*var dates = ['11/13/2017', '11/14/2017', '11/15/2017', '11/16/2017', '11/17/2017'];
@@ -40,6 +40,3 @@ function start() {
             }
         ]));
     }*/
-}
-
-start();
