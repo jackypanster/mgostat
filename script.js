@@ -1,5 +1,7 @@
 var dates = ['11/13/2017', '11/14/2017', '11/15/2017', '11/16/2017', '11/17/2017'];
 
+printjson(db.messages.find());
+
 for (var i = 0; i < dates.length; i++) {
     printjson(db.batches.aggregate([
         {
